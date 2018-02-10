@@ -1,3 +1,6 @@
+#http://www.lintcode.com/en/problem/reverse-nodes-in-k-group/#
+##############################################################
+
 #Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
 #
 #If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
@@ -61,7 +64,7 @@ class Solution:
         nk.next = None ##
         
         cur, post = n1, n1.next
-        #print cur.val, post.val
+        
         for i in range(1, k):
             temp = post.next
             post.next = cur
@@ -69,6 +72,6 @@ class Solution:
         
         head.next = nk
         n1.next = nkplus
-        #print head.val, n1.val, nk.val
+        
         
         return n1
